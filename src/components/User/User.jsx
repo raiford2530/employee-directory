@@ -1,8 +1,9 @@
-const User = ({user: {name: {first, last}, picture: {medium}, cell, email}}) => {
+const User = ({user: {name, cell, email, medium}}) => {
+
     return(
         <tr>
-            <td><img src={medium} alt={first}></img></td>
-            <td>{first}, {last}</td>
+            <td><img src={medium} alt={name}></img></td>
+            <td>{name}</td>
             <td>{cell}</td>
             <td>{email}</td>
         </tr>
