@@ -1,8 +1,11 @@
-const User = (props) => {
+const User = ({user: {name: {first, last}, picture: {medium}, cell, email}}) => {
     return(
-        <div className="row">
-            This is a user row.
-        </div>
+        <tr>
+            <td><img src={medium} alt={first}></img></td>
+            <td>{first}, {last}</td>
+            <td>{cell}</td>
+            <td>{email}</td>
+        </tr>
     )
 }
 
